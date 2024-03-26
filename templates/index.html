@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model Predictor</title>
+</head>
+<body>
+    <h1>ML Model Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br><br>
+
+        <label for="health_wellness">health_wellness:</label>
+        <input type="text" id="health_wellness" name="health_wellness"><br><br>
+
+        <label for="monthly_income">monthly_income:</label>
+        <input type="text" id="monthly_income" name="monthly_income"><br><br>
+
+        <label for="food">food:</label>
+        <input type="text" id="food" name="food"><br><br>
+
+        <!-- Include input fields for other features as needed -->
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
